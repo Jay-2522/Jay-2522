@@ -1,13 +1,17 @@
 
 <div align="center"> 
-   <h1> Hey, I'm Virlanki Jaidheep </h1>
+   <h1> Hey, I'm Virlanki Jaidheep 🏎️💨 </h1>
    <h4> race react respond </h4> </div> 
  <br>
  </br>
  </br>
-<div style="display:flex;justify-content:center; align-items:center;height:100;margin:0;">
-  <img src="https://media1.tenor.com/m/Za0xjZTF3voAAAAC/f1.gif" alt="GIF" style="max-width:100%;height:auto;">
+<div align="center">
+  <img src="https://i.pinimg.com/originals/dd/79/4e/dd794eab856dc258b564fa88a92f02c4.gif" 
+       alt="GIF" 
+       width="500px">
 </div>
+
+
 
 
 
