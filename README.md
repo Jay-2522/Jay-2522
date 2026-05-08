@@ -77,14 +77,17 @@
 
 ---
 
-## 📊 GitHub Stats
+## 🔥 Streak & Activity
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Jay-2522&show_icons=true&theme=tokyonight&hide_border=true" height="165" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Jay-2522&layout=compact&theme=tokyonight&hide_border=true" height="165" />
+  <img src="https://streak-stats.demolab.com?user=Jay-2522&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
 </div>
 
 <br/>
+
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Jay-2522&theme=tokyo-night&hide_border=true" alt="Activity Graph" />
+</div>
 
 ---
 
