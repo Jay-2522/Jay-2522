@@ -107,6 +107,3 @@
 
 <br/>
 
-<div align="center">
-  <img src="https://komarev.com/ghpvc/?username=Jay-2522&style=flat-square&color=blue" alt="Profile views" />
-</div>
