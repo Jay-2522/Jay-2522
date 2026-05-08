@@ -18,10 +18,10 @@
  <br>
  <br>
  
-👾 I’m currently working on Data Analytics
+👾 I’m currently working on Full Stack with AI Integration
   
 
-👾 Ask me about anything related to Python and SQL  
+👾 Ask me about anything related to AI&ML 
 
 👾 Reach me out [virlankijaidheep@gmail.com](virlankijaidheepwork@gmail.com)  
  </br>
