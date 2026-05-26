@@ -80,7 +80,7 @@
 ## 🔥 Streak & Activity
 
 <div align="center">
-  <img src="[https://streak-stats.demolab.com](https://github-readme-streak-stats.herokuapp.com)?user=Jay-2522&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
+  <img src="https://streak-stats.demolab.com?user=Jay-2522&theme=tokyonight&hide_border=true&v=2" alt="GitHub Streak" />
 </div>
 
 <br/>
