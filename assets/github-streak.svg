@@ -1,9 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="220">
-  <rect width="100%" height="100%" fill="#0d1117"/>
-  <text x="50%" y="50%" text-anchor="middle"
-    fill="#58a6ff"
-    font-size="28"
-    font-family="Arial">
-    GitHub Streak Generator Setup Complete
-  </text>
+<svg width="640" height="250" viewBox="0 0 640 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="250" rx="14" fill="#1B1B2F"/>
+
+  <text x="100" y="96" text-anchor="middle" fill="#70A5FD" font-family="Arial, sans-serif" font-size="34" font-weight="700">215</text>
+  <text x="100" y="135" text-anchor="middle" fill="#70A5FD" font-family="Arial, sans-serif" font-size="16">Total Contributions</text>
+  <text x="100" y="170" text-anchor="middle" fill="#2DD4BF" font-family="Arial, sans-serif" font-size="14">Jun 4 - Present</text>
+
+  <line x1="250" y1="50" x2="250" y2="200" stroke="#D1D5DB" stroke-width="2"/>
+
+  <circle cx="320" cy="105" r="50" stroke="#70A5FD" stroke-width="7"/>
+  <circle cx="320" cy="55" r="8" fill="#1B1B2F" stroke="#70A5FD" stroke-width="5"/>
+
+  <text x="320" y="116" text-anchor="middle" fill="#C084FC" font-family="Arial, sans-serif" font-size="34" font-weight="700">14</text>
+  <text x="320" y="165" text-anchor="middle" fill="#C084FC" font-family="Arial, sans-serif" font-size="16" font-weight="700">Current Streak</text>
+  <text x="320" y="195" text-anchor="middle" fill="#2DD4BF" font-family="Arial, sans-serif" font-size="14">May 22 - Jun 4</text>
+
+  <line x1="410" y1="50" x2="410" y2="200" stroke="#D1D5DB" stroke-width="2"/>
+
+  <text x="505" y="96" text-anchor="middle" fill="#70A5FD" font-family="Arial, sans-serif" font-size="34" font-weight="700">14</text>
+  <text x="505" y="135" text-anchor="middle" fill="#70A5FD" font-family="Arial, sans-serif" font-size="16">Longest Streak</text>
+  <text x="505" y="170" text-anchor="middle" fill="#2DD4BF" font-family="Arial, sans-serif" font-size="14">May 22 - Jun 4</text>
 </svg>
