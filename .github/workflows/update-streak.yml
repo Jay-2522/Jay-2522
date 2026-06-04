@@ -38,7 +38,7 @@ jobs:
           token = os.environ["GH_TOKEN"]
 
           today = datetime.now(ZoneInfo("Asia/Kolkata")).date()
-          start = today - timedelta(days=3650)
+          start = today - timedelta(days=364)
 
           query = """
           query($login: String!, $from: DateTime!, $to: DateTime!) {
