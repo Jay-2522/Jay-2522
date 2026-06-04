@@ -80,7 +80,7 @@
 ## 🔥 Streak & Activity
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Jay-2522&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub Stats" />
+  <img src="./assets/github-streak.svg" alt="GitHub Streak" />
 </div>
 
 <br/>
