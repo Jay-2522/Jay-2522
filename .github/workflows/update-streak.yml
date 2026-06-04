@@ -142,7 +142,7 @@ jobs:
            <circle cx="320" cy="90" r="48" stroke="#70A5FD" stroke-width="7"/>
            <circle cx="320" cy="42" r="8" fill="#1B1B2F" stroke="#70A5FD" stroke-width="5"/>
 
-            <text x="320" y="116" text-anchor="middle" fill="#C084FC" font-family="Arial, sans-serif" font-size="34" font-weight="700">{current_streak}</text>
+            <text x="320" y="90" text-anchor="middle" dominant-baseline="middle" fill="#C084FC" font-family="Arial, sans-serif" font-size="34" font-weight="700">{current_streak}</text>
             <text x="320" y="165" text-anchor="middle" fill="#C084FC" font-family="Arial, sans-serif" font-size="16" font-weight="700">Current Streak</text>
             <text x="320" y="195" text-anchor="middle" fill="#2DD4BF" font-family="Arial, sans-serif" font-size="14">{fmt(current_start)} - {fmt(today) if current_streak > 0 else "-"}</text>
 
