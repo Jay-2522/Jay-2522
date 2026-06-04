@@ -2,7 +2,7 @@ name: Update GitHub Streak
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "45 18 * * *" # Daily 12:15 AM IST
   workflow_dispatch:
 
 permissions:
@@ -13,32 +13,158 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Generate Streak SVG
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Generate GitHub streak SVG
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_USERNAME: Jay-2522
         run: |
           mkdir -p assets
 
-          cat > assets/github-streak.svg << 'EOF'
-          <svg xmlns="http://www.w3.org/2000/svg" width="800" height="220">
-            <rect width="100%" height="100%" fill="#0d1117"/>
-            <text x="50%" y="50%" text-anchor="middle"
-              fill="#58a6ff"
-              font-size="28"
-              font-family="Arial">
-              GitHub Streak Generator Active
-            </text>
-          </svg>
-          EOF
+          cat > generate_streak.py << 'PY'
+          import os
+          import requests
+          from datetime import datetime, timedelta
+          from zoneinfo import ZoneInfo
 
-      - name: Commit Changes
+          username = os.environ["GITHUB_USERNAME"]
+          token = os.environ["GH_TOKEN"]
+
+          today = datetime.now(ZoneInfo("Asia/Kolkata")).date()
+          start = today - timedelta(days=365)
+
+          query = """
+          query($login: String!, $from: DateTime!, $to: DateTime!) {
+            user(login: $login) {
+              contributionsCollection(from: $from, to: $to) {
+                contributionCalendar {
+                  totalContributions
+                  weeks {
+                    contributionDays {
+                      date
+                      contributionCount
+                    }
+                  }
+                }
+              }
+            }
+          }
+          """
+
+          variables = {
+            "login": username,
+            "from": f"{start.isoformat()}T00:00:00Z",
+            "to": f"{today.isoformat()}T23:59:59Z"
+          }
+
+          response = requests.post(
+            "https://api.github.com/graphql",
+            json={"query": query, "variables": variables},
+            headers={"Authorization": f"Bearer {token}"},
+            timeout=30
+          )
+
+          response.raise_for_status()
+          result = response.json()
+
+          if "errors" in result:
+            raise Exception(result["errors"])
+
+          calendar = result["data"]["user"]["contributionsCollection"]["contributionCalendar"]
+          total = calendar["totalContributions"]
+
+          days = []
+          for week in calendar["weeks"]:
+            for day in week["contributionDays"]:
+              days.append({
+                "date": datetime.strptime(day["date"], "%Y-%m-%d").date(),
+                "count": day["contributionCount"]
+              })
+
+          day_map = {d["date"]: d["count"] for d in days}
+
+          current_streak = 0
+          cursor = today
+
+          while cursor >= start:
+            if day_map.get(cursor, 0) > 0:
+              current_streak += 1
+              cursor -= timedelta(days=1)
+            else:
+              break
+
+          longest_streak = 0
+          temp_streak = 0
+          longest_start = None
+          longest_end = None
+          temp_start = None
+
+          for item in sorted(days, key=lambda x: x["date"]):
+            day_date = item["date"]
+            count = item["count"]
+
+            if count > 0:
+              if temp_streak == 0:
+                temp_start = day_date
+              temp_streak += 1
+
+              if temp_streak > longest_streak:
+                longest_streak = temp_streak
+                longest_start = temp_start
+                longest_end = day_date
+            else:
+              temp_streak = 0
+              temp_start = None
+
+          def fmt(d):
+            if not d:
+              return "-"
+            return d.strftime("%b %d").replace(" 0", " ")
+
+          current_start = today - timedelta(days=current_streak - 1) if current_streak > 0 else None
+
+          svg = f'''<svg width="640" height="250" viewBox="0 0 640 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="640" height="250" rx="14" fill="#1B1B2F"/>
+
+            <text x="100" y="96" text-anchor="middle" fill="#70A5FD" font-family="Arial, sans-serif" font-size="34" font-weight="700">{total}</text>
+            <text x="100" y="135" text-anchor="middle" fill="#70A5FD" font-family="Arial, sans-serif" font-size="16">Total Contributions</text>
+            <text x="100" y="170" text-anchor="middle" fill="#2DD4BF" font-family="Arial, sans-serif" font-size="14">{fmt(start)} - Present</text>
+
+            <line x1="250" y1="50" x2="250" y2="200" stroke="#D1D5DB" stroke-width="2"/>
+
+            <circle cx="320" cy="105" r="50" stroke="#70A5FD" stroke-width="7"/>
+            <circle cx="320" cy="55" r="8" fill="#1B1B2F" stroke="#70A5FD" stroke-width="5"/>
+
+            <text x="320" y="116" text-anchor="middle" fill="#C084FC" font-family="Arial, sans-serif" font-size="34" font-weight="700">{current_streak}</text>
+            <text x="320" y="165" text-anchor="middle" fill="#C084FC" font-family="Arial, sans-serif" font-size="16" font-weight="700">Current Streak</text>
+            <text x="320" y="195" text-anchor="middle" fill="#2DD4BF" font-family="Arial, sans-serif" font-size="14">{fmt(current_start)} - {fmt(today) if current_streak > 0 else "-"}</text>
+
+            <line x1="410" y1="50" x2="410" y2="200" stroke="#D1D5DB" stroke-width="2"/>
+
+            <text x="505" y="96" text-anchor="middle" fill="#70A5FD" font-family="Arial, sans-serif" font-size="34" font-weight="700">{longest_streak}</text>
+            <text x="505" y="135" text-anchor="middle" fill="#70A5FD" font-family="Arial, sans-serif" font-size="16">Longest Streak</text>
+            <text x="505" y="170" text-anchor="middle" fill="#2DD4BF" font-family="Arial, sans-serif" font-size="14">{fmt(longest_start)} - {fmt(longest_end)}</text>
+          </svg>'''
+
+          with open("assets/github-streak.svg", "w", encoding="utf-8") as file:
+            file.write(svg)
+          PY
+
+          pip install requests
+          python generate_streak.py
+
+      - name: Commit updated SVG
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add assets/github-streak.svg
-
-          git diff --staged --quiet || git commit -m "Update streak SVG"
-
+          git diff --staged --quiet || git commit -m "Update GitHub streak SVG"
           git push
