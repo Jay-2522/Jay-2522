@@ -80,7 +80,7 @@
 ## 🔥 Streak & Activity
 
 <div align="center">
-  <img src="https://streak-stats.demolab.com?user=Jay-2522&theme=tokyonight&hide_border=true&v=2" alt="GitHub Streak" />
+  <img src="https://github-readme-stats.vercel.app/api?username=Jay-2522&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub Stats" />
 </div>
 
 <br/>
