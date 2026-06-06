@@ -92,6 +92,8 @@ jobs:
 
           current_streak = 0
           cursor = today
+          if day_map.get(cursor, 0) == 0:
+              cursor -= timedelta(days=1)
 
           while cursor >= start:
             if day_map.get(cursor, 0) > 0:
@@ -127,9 +129,8 @@ jobs:
             if not d:
               return "-"
             return d.strftime("%b %d").replace(" 0", " ")
-
-          current_start = today - timedelta(days=current_streak - 1) if current_streak > 0 else None
-
+          current_end = today if day_map.get(today, 0) > 0 else today - timedelta(days=1)
+          current_start = current_end - timedelta(days=current_streak - 1) if current_streak > 0 else None
           svg = f'''<svg width="640" height="250" viewBox="0 0 640 250" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="640" height="250" rx="14" fill="#1B1B2F"/>
 
@@ -144,7 +145,7 @@ jobs:
 
             <text x="320" y="98" text-anchor="middle" dominant-baseline="middle" fill="#C084FC" font-family="Arial, sans-serif" font-size="34" font-weight="700">{current_streak}</text>
             <text x="320" y="165" text-anchor="middle" fill="#C084FC" font-family="Arial, sans-serif" font-size="16" font-weight="700">Current Streak</text>
-            <text x="320" y="195" text-anchor="middle" fill="#2DD4BF" font-family="Arial, sans-serif" font-size="14">{fmt(current_start)} - {fmt(today) if current_streak > 0 else "-"}</text>
+            <text x="320" y="195" text-anchor="middle" fill="#2DD4BF" font-family="Arial, sans-serif" font-size="14">{fmt(current_start)} - {fmt(current_end) if current_streak > 0 else "-"}</text>
 
             <line x1="410" y1="50" x2="410" y2="200" stroke="#D1D5DB" stroke-width="2"/>
 
