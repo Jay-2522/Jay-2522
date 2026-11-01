@@ -23,34 +23,34 @@
 
 ## 🛠️ Tech Stack
 
-<table>
+<table width="100%">
   <tr>
     <td width="50%" valign="top">
       <h3 align="center">🎨 Frontend</h3>
       <p align="center">
-        <a href="https://react.dev/"><img src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React" title="React" height="42" /><br/><sub>React</sub></a>&nbsp;
-        <a href="https://www.typescriptlang.org/"><img src="https://profilinator.rishav.dev/skills-assets/typescript-original.svg" alt="TypeScript" title="TypeScript" height="42" /><br/><sub>TypeScript</sub></a>&nbsp;
-        <a href="https://www.javascript.com/"><img src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" title="JavaScript" height="42" /><br/><sub>JavaScript</sub></a>&nbsp;
-        <a href="https://html.spec.whatwg.org/"><img src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" title="HTML5" height="42" /><br/><sub>HTML5</sub></a>&nbsp;
-        <a href="https://www.w3.org/Style/CSS/"><img src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" title="CSS3" height="42" /><br/><sub>CSS3</sub></a>
+        <a style="display:inline-block;width:78px;margin:8px 4px;text-align:center;vertical-align:top;" href="https://react.dev/"><img src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React" title="React" height="42" /><br/><sub>React</sub></a>
+        <a style="display:inline-block;width:78px;margin:8px 4px;text-align:center;vertical-align:top;" href="https://www.typescriptlang.org/"><img src="https://profilinator.rishav.dev/skills-assets/typescript-original.svg" alt="TypeScript" title="TypeScript" height="42" /><br/><sub>TypeScript</sub></a>
+        <a style="display:inline-block;width:78px;margin:8px 4px;text-align:center;vertical-align:top;" href="https://www.javascript.com/"><img src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" title="JavaScript" height="42" /><br/><sub>JavaScript</sub></a>
+        <a style="display:inline-block;width:78px;margin:8px 4px;text-align:center;vertical-align:top;" href="https://html.spec.whatwg.org/"><img src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" title="HTML5" height="42" /><br/><sub>HTML5</sub></a>
+        <a style="display:inline-block;width:78px;margin:8px 4px;text-align:center;vertical-align:top;" href="https://www.w3.org/Style/CSS/"><img src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" title="CSS3" height="42" /><br/><sub>CSS3</sub></a>
         <br/>
-        <a href="https://tailwindcss.com/"><img src="https://profilinator.rishav.dev/skills-assets/tailwindcss.svg" alt="Tailwind CSS" title="Tailwind CSS" height="42" /><br/><sub>Tailwind CSS</sub></a>&nbsp;
-        <a href="https://getbootstrap.com/"><img src="https://profilinator.rishav.dev/skills-assets/bootstrap-plain.svg" alt="Bootstrap" title="Bootstrap" height="42" /><br/><sub>Bootstrap</sub></a>&nbsp;
-        <a href="https://www.figma.com/"><img src="https://profilinator.rishav.dev/skills-assets/figma-icon.svg" alt="Figma" title="Figma" height="42" /><br/><sub>Figma</sub></a>&nbsp;
-        <a href="https://www.chartjs.org/"><img src="https://profilinator.rishav.dev/skills-assets/logo-title.svg" alt="Chart.js" title="Chart.js" height="42" /><br/><sub>Chart.js</sub></a>&nbsp;
-        <a href="https://www.adobe.com/products/illustrator.html"><img src="https://profilinator.rishav.dev/skills-assets/adobe_illustrator-icon.svg" alt="Adobe Illustrator" title="Adobe Illustrator" height="42" /><br/><sub>Illustrator</sub></a>
+        <a style="display:inline-block;width:78px;margin:8px 4px;text-align:center;vertical-align:top;" href="https://tailwindcss.com/"><img src="https://profilinator.rishav.dev/skills-assets/tailwindcss.svg" alt="Tailwind CSS" title="Tailwind CSS" height="42" /><br/><sub>Tailwind CSS</sub></a>
+        <a style="display:inline-block;width:78px;margin:8px 4px;text-align:center;vertical-align:top;" href="https://getbootstrap.com/"><img src="https://profilinator.rishav.dev/skills-assets/bootstrap-plain.svg" alt="Bootstrap" title="Bootstrap" height="42" /><br/><sub>Bootstrap</sub></a>
+        <a style="display:inline-block;width:78px;margin:8px 4px;text-align:center;vertical-align:top;" href="https://www.figma.com/"><img src="https://profilinator.rishav.dev/skills-assets/figma-icon.svg" alt="Figma" title="Figma" height="42" /><br/><sub>Figma</sub></a>
+        <a style="display:inline-block;width:78px;margin:8px 4px;text-align:center;vertical-align:top;" href="https://www.chartjs.org/"><img src="https://profilinator.rishav.dev/skills-assets/logo-title.svg" alt="Chart.js" title="Chart.js" height="42" /><br/><sub>Chart.js</sub></a>
+        <a style="display:inline-block;width:78px;margin:8px 4px;text-align:center;vertical-align:top;" href="https://www.adobe.com/products/illustrator.html"><img src="https://profilinator.rishav.dev/skills-assets/adobe_illustrator-icon.svg" alt="Adobe Illustrator" title="Adobe Illustrator" height="42" /><br/><sub>Illustrator</sub></a>
       </p>
     </td>
     <td width="50%" valign="top">
       <h3 align="center">⚙️ Backend</h3>
       <p align="center">
-        <a href="https://www.djangoproject.com/"><img src="https://profilinator.rishav.dev/skills-assets/django-original.svg" alt="Django" title="Django" height="42" /><br/><sub>Django</sub></a>&nbsp;
-        <a href="https://nodejs.org/"><img src="https://profilinator.rishav.dev/skills-assets/nodejs-original-wordmark.svg" alt="Node.js" title="Node.js" height="42" /><br/><sub>Node.js</sub></a>&nbsp;
-        <a href="https://expressjs.com/"><img src="https://profilinator.rishav.dev/skills-assets/express-original-wordmark.svg" alt="Express.js" title="Express.js" height="42" /><br/><sub>Express.js</sub></a>
+        <a style="display:inline-block;width:78px;margin:8px 4px;text-align:center;vertical-align:top;" href="https://www.djangoproject.com/"><img src="https://profilinator.rishav.dev/skills-assets/django-original.svg" alt="Django" title="Django" height="42" /><br/><sub>Django</sub></a>
+        <a style="display:inline-block;width:78px;margin:8px 4px;text-align:center;vertical-align:top;" href="https://nodejs.org/"><img src="https://profilinator.rishav.dev/skills-assets/nodejs-original-wordmark.svg" alt="Node.js" title="Node.js" height="42" /><br/><sub>Node.js</sub></a>
+        <a style="display:inline-block;width:78px;margin:8px 4px;text-align:center;vertical-align:top;" href="https://expressjs.com/"><img src="https://profilinator.rishav.dev/skills-assets/express-original-wordmark.svg" alt="Express.js" title="Express.js" height="42" /><br/><sub>Express.js</sub></a>
         <br/>
-        <a href="https://aws.amazon.com/"><img src="https://profilinator.rishav.dev/skills-assets/amazonwebservices-original-wordmark.svg" alt="Amazon Web Services" title="Amazon Web Services" height="42" /><br/><sub>AWS</sub></a>&nbsp;
-        <a href="https://www.cprogramming.com/"><img src="https://profilinator.rishav.dev/skills-assets/c-original.svg" alt="C" title="C" height="42" /><br/><sub>C</sub></a>&nbsp;
-        <a href="https://wordpress.org/"><img src="https://profilinator.rishav.dev/skills-assets/wordpress.png" alt="WordPress" title="WordPress" height="42" /><br/><sub>WordPress</sub></a>
+        <a style="display:inline-block;width:78px;margin:8px 4px;text-align:center;vertical-align:top;" href="https://aws.amazon.com/"><img src="https://profilinator.rishav.dev/skills-assets/amazonwebservices-original-wordmark.svg" alt="Amazon Web Services" title="Amazon Web Services" height="42" /><br/><sub>AWS</sub></a>
+        <a style="display:inline-block;width:78px;margin:8px 4px;text-align:center;vertical-align:top;" href="https://www.cprogramming.com/"><img src="https://profilinator.rishav.dev/skills-assets/c-original.svg" alt="C" title="C" height="42" /><br/><sub>C</sub></a>
+        <a style="display:inline-block;width:78px;margin:8px 4px;text-align:center;vertical-align:top;" href="https://wordpress.org/"><img src="https://profilinator.rishav.dev/skills-assets/wordpress.png" alt="WordPress" title="WordPress" height="42" /><br/><sub>WordPress</sub></a>
       </p>
     </td>
   </tr>
@@ -58,24 +58,24 @@
     <td width="50%" valign="top">
       <h3 align="center">🤖 AI &amp; ML</h3>
       <p align="center">
-        <a href="https://www.python.org/"><img src="https://profilinator.rishav.dev/skills-assets/python-original.svg" alt="Python" title="Python" height="42" /><br/><sub>Python</sub></a>&nbsp;
-        <a href="https://www.tensorflow.org/"><img src="https://profilinator.rishav.dev/skills-assets/tensorflow-icon.svg" alt="TensorFlow" title="TensorFlow" height="42" /><br/><sub>TensorFlow</sub></a>&nbsp;
-        <a href="https://pytorch.org/"><img src="https://profilinator.rishav.dev/skills-assets/pytorch-icon.svg" alt="PyTorch" title="PyTorch" height="42" /><br/><sub>PyTorch</sub></a>&nbsp;
-        <a href="https://scikit-learn.org/"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="scikit-learn" title="scikit-learn" height="42" /><br/><sub>scikit-learn</sub></a>
+        <a style="display:inline-block;width:78px;margin:8px 4px;text-align:center;vertical-align:top;" href="https://www.python.org/"><img src="https://profilinator.rishav.dev/skills-assets/python-original.svg" alt="Python" title="Python" height="42" /><br/><sub>Python</sub></a>
+        <a style="display:inline-block;width:78px;margin:8px 4px;text-align:center;vertical-align:top;" href="https://www.tensorflow.org/"><img src="https://profilinator.rishav.dev/skills-assets/tensorflow-icon.svg" alt="TensorFlow" title="TensorFlow" height="42" /><br/><sub>TensorFlow</sub></a>
+        <a style="display:inline-block;width:78px;margin:8px 4px;text-align:center;vertical-align:top;" href="https://pytorch.org/"><img src="https://profilinator.rishav.dev/skills-assets/pytorch-icon.svg" alt="PyTorch" title="PyTorch" height="42" /><br/><sub>PyTorch</sub></a>
+        <a style="display:inline-block;width:78px;margin:8px 4px;text-align:center;vertical-align:top;" href="https://scikit-learn.org/"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="scikit-learn" title="scikit-learn" height="42" /><br/><sub>scikit-learn</sub></a>
         <br/>
-        <a href="https://www.r-project.org/"><img src="https://profilinator.rishav.dev/skills-assets/r.svg" alt="R" title="R" height="42" /><br/><sub>R</sub></a>&nbsp;
-        <a href="https://powerbi.microsoft.com/"><img src="https://profilinator.rishav.dev/skills-assets/powerbi.png" alt="Power BI" title="Power BI" height="42" /><br/><sub>Power BI</sub></a>&nbsp;
-        <a href="https://www.tableau.com/"><img src="https://profilinator.rishav.dev/skills-assets/tableau.svg" alt="Tableau" title="Tableau" height="42" /><br/><sub>Tableau</sub></a>
+        <a style="display:inline-block;width:78px;margin:8px 4px;text-align:center;vertical-align:top;" href="https://www.r-project.org/"><img src="https://profilinator.rishav.dev/skills-assets/r.svg" alt="R" title="R" height="42" /><br/><sub>R</sub></a>
+        <a style="display:inline-block;width:78px;margin:8px 4px;text-align:center;vertical-align:top;" href="https://powerbi.microsoft.com/"><img src="https://profilinator.rishav.dev/skills-assets/powerbi.png" alt="Power BI" title="Power BI" height="42" /><br/><sub>Power BI</sub></a>
+        <a style="display:inline-block;width:78px;margin:8px 4px;text-align:center;vertical-align:top;" href="https://www.tableau.com/"><img src="https://profilinator.rishav.dev/skills-assets/tableau.svg" alt="Tableau" title="Tableau" height="42" /><br/><sub>Tableau</sub></a>
       </p>
     </td>
     <td width="50%" valign="top">
       <h3 align="center">🗄️ Database</h3>
       <p align="center">
-        <a href="https://www.mongodb.com/"><img src="https://profilinator.rishav.dev/skills-assets/mongodb-original-wordmark.svg" alt="MongoDB" title="MongoDB" height="42" /><br/><sub>MongoDB</sub></a>&nbsp;
-        <a href="https://www.postgresql.org/"><img src="https://profilinator.rishav.dev/skills-assets/postgresql-original-wordmark.svg" alt="PostgreSQL" title="PostgreSQL" height="42" /><br/><sub>PostgreSQL</sub></a>
+        <a style="display:inline-block;width:78px;margin:8px 4px;text-align:center;vertical-align:top;" href="https://www.mongodb.com/"><img src="https://profilinator.rishav.dev/skills-assets/mongodb-original-wordmark.svg" alt="MongoDB" title="MongoDB" height="42" /><br/><sub>MongoDB</sub></a>
+        <a style="display:inline-block;width:78px;margin:8px 4px;text-align:center;vertical-align:top;" href="https://www.postgresql.org/"><img src="https://profilinator.rishav.dev/skills-assets/postgresql-original-wordmark.svg" alt="PostgreSQL" title="PostgreSQL" height="42" /><br/><sub>PostgreSQL</sub></a>
         <br/>
-        <a href="https://www.mysql.com/"><img src="https://profilinator.rishav.dev/skills-assets/mysql-original-wordmark.svg" alt="MySQL" title="MySQL" height="42" /><br/><sub>MySQL</sub></a>&nbsp;
-        <a href="https://www.oracle.com/database/"><img src="https://profilinator.rishav.dev/skills-assets/oracle-original.svg" alt="Oracle Database" title="Oracle Database" height="42" /><br/><sub>Oracle DB</sub></a>
+        <a style="display:inline-block;width:78px;margin:8px 4px;text-align:center;vertical-align:top;" href="https://www.mysql.com/"><img src="https://profilinator.rishav.dev/skills-assets/mysql-original-wordmark.svg" alt="MySQL" title="MySQL" height="42" /><br/><sub>MySQL</sub></a>
+        <a style="display:inline-block;width:78px;margin:8px 4px;text-align:center;vertical-align:top;" href="https://www.oracle.com/database/"><img src="https://profilinator.rishav.dev/skills-assets/oracle-original.svg" alt="Oracle Database" title="Oracle Database" height="42" /><br/><sub>Oracle DB</sub></a>
       </p>
     </td>
   </tr>
