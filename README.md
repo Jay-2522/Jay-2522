@@ -86,7 +86,7 @@
 <br/>
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Jay-2522&theme=tokyo-night&hide_border=true" alt="Activity Graph" />
+  <img src="./assets/github-activity.svg" alt="Activity Graph" />
 </div>
 
 ---
