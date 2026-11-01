@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate the profile streak and activity SVGs from one GitHub calendar."""
+"""Generate the profile contribution streak SVG from GitHub's calendar."""
 
 from __future__ import annotations
 
@@ -35,11 +35,9 @@ query($login: String!, $from: DateTime!, $to: DateTime!) {
 
 BG = "#1B1B2F"
 TEXT = "#E6EDF3"
-MUTED = "#9BA3B4"
 BLUE = "#70A5FD"
 PURPLE = "#C084FC"
 TEAL = "#2DD4BF"
-LEVELS = ("#292943", "#234E70", "#256A8A", "#298A9A", "#2DD4BF")
 
 
 def fetch_calendar(token: str, start: date, end: date) -> dict:
@@ -142,14 +140,14 @@ def escape(value: object) -> str:
     return html.escape(str(value), quote=True)
 
 
-def render_streak(total: int, days: list[tuple[date, int]], start: date, end: date) -> str:
+def render_streak(total: int, days: list[tuple[date, int]]) -> str:
     current, longest, current_start, current_end, best_start, best_end = streaks(days)
-    year_label = f"{start:%b %-d, %Y} – {end:%b %-d, %Y} UTC"
+    year_label = "Last 365 days"
     current_range = f"{fmt_day(current_start)} – {fmt_day(current_end)}" if current else "No active streak"
     longest_range = f"{fmt_day(best_start)} – {fmt_day(best_end)}" if longest else "—"
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="640" height="250" viewBox="0 0 640 250" role="img" aria-labelledby="title desc">
   <title id="title">GitHub contribution streak for {escape(USERNAME)}</title>
-  <desc id="desc">{total} contributions from {escape(year_label)}; current streak {current} days; longest streak {longest} days.</desc>
+  <desc id="desc">{total} contributions over the last 365 days; current streak {current} days; longest streak {longest} days.</desc>
   <rect width="640" height="250" rx="14" fill="{BG}"/>
   <text x="100" y="96" text-anchor="middle" fill="{BLUE}" font-family="Arial,sans-serif" font-size="34" font-weight="700">{total}</text>
   <text x="100" y="135" text-anchor="middle" fill="{TEXT}" font-family="Arial,sans-serif" font-size="16">Total Contributions</text>
@@ -167,56 +165,7 @@ def render_streak(total: int, days: list[tuple[date, int]], start: date, end: da
 '''
 
 
-def level(count: int) -> int:
-    if count == 0:
-        return 0
-    if count == 1:
-        return 1
-    if count <= 4:
-        return 2
-    if count <= 9:
-        return 3
-    return 4
-
-
-def render_activity(days: list[tuple[date, int]], start: date, end: date, total: int) -> str:
-    cell, gap, step = 11, 3, 14
-    first_sunday = start - timedelta(days=(start.weekday() + 1) % 7)
-    columns = ((end - first_sunday).days // 7) + 1
-    left, top, width, height = 42, 42, 820, 166
-    counts = dict(days)
-    pieces = [f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc">
-  <title id="title">GitHub activity for {escape(USERNAME)}</title>
-  <desc id="desc">Daily GitHub contributions from {start.isoformat()} through {end.isoformat()} UTC; {total} total contributions.</desc>
-  <rect width="{width}" height="{height}" rx="14" fill="{BG}"/>
-  <text x="{left}" y="23" fill="{TEXT}" font-family="Arial,sans-serif" font-size="14" font-weight="700">Contribution activity</text>
-  <text x="{left+176}" y="23" fill="{MUTED}" font-family="Arial,sans-serif" font-size="10">{start.isoformat()} – {end.isoformat()} UTC</text>''']
-    for label, row in (("Mon", 1), ("Wed", 3), ("Fri", 5)):
-        y = top + row * step + cell - 1
-        pieces.append(f'<text x="{left-9}" y="{y}" text-anchor="end" fill="{MUTED}" font-family="Arial,sans-serif" font-size="9">{label}</text>')
-    month_columns: dict[tuple[int, int], int] = {(start.year, start.month): 0}
-    for day, _ in days:
-        if day.day == 1:
-            month_columns[(day.year, day.month)] = (day - first_sunday).days // 7
-    for (year, month), col in month_columns.items():
-        x = left + col * step
-        pieces.append(f'<text x="{x}" y="{top-8}" fill="{MUTED}" font-family="Arial,sans-serif" font-size="9">{date(year, month, 1).strftime("%b")}</text>')
-    for day, count in days:
-        col = (day - first_sunday).days // 7
-        row = (day.weekday() + 1) % 7
-        x, y = left + col * step, top + row * step
-        title = f"{day.isoformat()}: {count} contribution{'s' if count != 1 else ''}"
-        pieces.append(f'<rect x="{x}" y="{y}" width="{cell}" height="{cell}" rx="2" fill="{LEVELS[level(count)]}"><title>{escape(title)}</title></rect>')
-    legend_x, legend_y = width - 154, height - 19
-    pieces.append(f'<text x="{legend_x-31}" y="{legend_y+9}" fill="{MUTED}" font-family="Arial,sans-serif" font-size="9">Less</text>')
-    for i, color in enumerate(LEVELS):
-        pieces.append(f'<rect x="{legend_x + i*(cell+gap)}" y="{legend_y}" width="{cell}" height="{cell}" rx="2" fill="{color}"/>')
-    pieces.append(f'<text x="{legend_x + len(LEVELS)*(cell+gap) + 2}" y="{legend_y+9}" fill="{MUTED}" font-family="Arial,sans-serif" font-size="9">More</text>')
-    pieces.append("</svg>")
-    return "\n".join(pieces) + "\n"
-
-
-def generate(now: datetime | None = None, token: str | None = None) -> tuple[str, str, dict]:
+def generate(now: datetime | None = None, token: str | None = None) -> tuple[str, dict]:
     now = now or datetime.now(timezone.utc)
     end = now.astimezone(timezone.utc).date()
     start = end - timedelta(days=364)
@@ -233,20 +182,19 @@ def generate(now: datetime | None = None, token: str | None = None) -> tuple[str
     # restricted; it is diagnostic metadata and must not be added again.
     diagnostics = {"start": start.isoformat(), "end": end.isoformat(), "daily_total": daily_total,
                    "calendar_total": calendar_total, "restricted_count": result.get("restricted")}
-    return render_streak(calendar_total, days, start, end), render_activity(days, start, end, calendar_total), diagnostics
+    return render_streak(calendar_total, days), diagnostics
 
 
 def main() -> None:
     try:
-        streak_svg, activity_svg, diagnostics = generate()
+        streak_svg, diagnostics = generate()
         OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
         (OUTPUT_DIR / "github-streak.svg").write_text(streak_svg, encoding="utf-8")
-        (OUTPUT_DIR / "github-activity.svg").write_text(activity_svg, encoding="utf-8")
-        print(f"Generated contribution widgets for {diagnostics['start']} through {diagnostics['end']} UTC.")
+        print(f"Generated contribution streak for {diagnostics['start']} through {diagnostics['end']} UTC.")
         print(f"Calendar total: {diagnostics['calendar_total']}; sum of in-range daily counts: {diagnostics['daily_total']}.")
         print("GraphQL restrictedContributionsCount was queried for diagnostics and was not added to the calendar total.")
         if diagnostics["calendar_total"] != diagnostics["daily_total"]:
-            print("::warning:: Calendar total differs from the in-range daily sum; SVGs use GitHub's collection total and the returned daily values.")
+            print("::warning:: Calendar total differs from the in-range daily sum; the streak SVG uses GitHub's collection total.")
     except RuntimeError as exc:
         print(str(exc), file=sys.stderr)
         raise SystemExit(1)

@@ -77,16 +77,10 @@
 
 ---
 
-## 🔥 Streak & Activity
+## 🔥 Contributions & Streak
 
 <div align="center">
   <img src="./assets/github-streak.svg" alt="GitHub Streak" />
-</div>
-
-<br/>
-
-<div align="center">
-  <img src="./assets/github-activity.svg" alt="Activity Graph" />
 </div>
 
 ---
