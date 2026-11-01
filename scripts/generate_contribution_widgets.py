@@ -148,19 +148,28 @@ def render_streak(total: int, days: list[tuple[date, int]]) -> str:
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="640" height="250" viewBox="0 0 640 250" role="img" aria-labelledby="title desc">
   <title id="title">GitHub contribution streak for {escape(USERNAME)}</title>
   <desc id="desc">{total} contributions over the last 365 days; current streak {current} days; longest streak {longest} days.</desc>
+  <defs>
+    <linearGradient id="streakRing" x1="272" y1="90" x2="368" y2="90" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#C084FC"/>
+      <stop offset="52%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#70A5FD"/>
+    </linearGradient>
+  </defs>
   <rect width="640" height="250" rx="14" fill="{BG}"/>
-  <text x="100" y="96" text-anchor="middle" fill="{BLUE}" font-family="Arial,sans-serif" font-size="34" font-weight="700">{total}</text>
-  <text x="100" y="135" text-anchor="middle" fill="{TEXT}" font-family="Arial,sans-serif" font-size="16">Total Contributions</text>
-  <text x="100" y="170" text-anchor="middle" fill="{TEAL}" font-family="Arial,sans-serif" font-size="12">{escape(year_label)}</text>
+  <text x="55" y="101" fill="{TEXT}" font-family="Apple Color Emoji,Segoe UI Emoji,Noto Color Emoji,sans-serif" font-size="28">🔥</text>
+  <text x="130" y="96" text-anchor="middle" fill="{BLUE}" font-family="Arial,sans-serif" font-size="34" font-weight="700">{total}</text>
+  <text x="125" y="135" text-anchor="middle" fill="{TEXT}" font-family="Arial,sans-serif" font-size="16">Total Contributions</text>
+  <text x="125" y="170" text-anchor="middle" fill="{TEAL}" font-family="Arial,sans-serif" font-size="12">{escape(year_label)}</text>
   <line x1="250" y1="50" x2="250" y2="200" stroke="#D1D5DB" stroke-opacity=".55" stroke-width="2"/>
-  <circle cx="320" cy="90" r="48" stroke="{BLUE}" stroke-width="7" fill="none"/><circle cx="320" cy="42" r="8" fill="{BG}" stroke="{BLUE}" stroke-width="5"/>
+  <circle cx="320" cy="90" r="48" stroke="url(#streakRing)" stroke-width="7" fill="none"/><circle cx="320" cy="42" r="8" fill="{BG}" stroke="url(#streakRing)" stroke-width="5"/>
   <text x="320" y="98" text-anchor="middle" dominant-baseline="middle" fill="{PURPLE}" font-family="Arial,sans-serif" font-size="34" font-weight="700">{current}</text>
   <text x="320" y="165" text-anchor="middle" fill="{PURPLE}" font-family="Arial,sans-serif" font-size="16" font-weight="700">Current Streak</text>
   <text x="320" y="195" text-anchor="middle" fill="{TEAL}" font-family="Arial,sans-serif" font-size="13">{escape(current_range)}</text>
   <line x1="410" y1="50" x2="410" y2="200" stroke="#D1D5DB" stroke-opacity=".55" stroke-width="2"/>
-  <text x="505" y="96" text-anchor="middle" fill="{BLUE}" font-family="Arial,sans-serif" font-size="34" font-weight="700">{longest}</text>
-  <text x="505" y="135" text-anchor="middle" fill="{TEXT}" font-family="Arial,sans-serif" font-size="16">Longest Streak</text>
-  <text x="505" y="170" text-anchor="middle" fill="{TEAL}" font-family="Arial,sans-serif" font-size="13">{escape(longest_range)}</text>
+  <text x="480" y="99" fill="{TEXT}" font-family="Apple Color Emoji,Segoe UI Emoji,Noto Color Emoji,sans-serif" font-size="24">⭐</text>
+  <text x="535" y="96" text-anchor="middle" fill="{BLUE}" font-family="Arial,sans-serif" font-size="34" font-weight="700">{longest}</text>
+  <text x="525" y="135" text-anchor="middle" fill="{TEXT}" font-family="Arial,sans-serif" font-size="16">Longest Streak</text>
+  <text x="525" y="170" text-anchor="middle" fill="{TEAL}" font-family="Arial,sans-serif" font-size="13">{escape(longest_range)}</text>
 </svg>
 '''
 
