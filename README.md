@@ -32,7 +32,7 @@
 ## 🔥 Contributions & Streak
 
 <div align="center">
-  <img src="./assets/github-streak.svg" alt="GitHub Streak" />
+  <img src="./assets/github-streak-v2.svg" alt="GitHub Streak" />
 </div>
 
 ---

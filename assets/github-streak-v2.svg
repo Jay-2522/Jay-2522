@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="250" viewBox="0 0 640 250" role="img" aria-labelledby="title desc">
+  <title id="title">GitHub contribution streak for Jay-2522</title>
+  <desc id="desc">1145 contributions over the last 365 days; current streak 0 days; longest streak 35 days.</desc>
+  <defs>
+    <linearGradient id="streakRing" x1="272" y1="90" x2="368" y2="90" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#C084FC"/>
+      <stop offset="52%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#70A5FD"/>
+    </linearGradient>
+    <linearGradient id="totalTitleGradient" x1="60" y1="0" x2="190" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#C084FC"/>
+      <stop offset="52%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#70A5FD"/>
+    </linearGradient>
+    <linearGradient id="longestTitleGradient" x1="465" y1="0" x2="585" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#C084FC"/>
+      <stop offset="52%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#70A5FD"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="250" rx="14" fill="#161B22"/>
+  <text x="55" y="101" fill="#E6EDF3" font-family="Apple Color Emoji,Segoe UI Emoji,Noto Color Emoji,sans-serif" font-size="28">🔥</text>
+  <text x="130" y="96" text-anchor="middle" fill="#C084FC" font-family="Arial,sans-serif" font-size="34" font-weight="700">1145</text>
+  <text x="125" y="135" text-anchor="middle" fill="url(#totalTitleGradient)" font-family="Arial,sans-serif" font-size="16">Total Contributions</text>
+  <text x="125" y="170" text-anchor="middle" fill="#2DD4BF" font-family="Arial,sans-serif" font-size="12">Last 365 days</text>
+  <line x1="250" y1="50" x2="250" y2="200" stroke="#D1D5DB" stroke-opacity=".55" stroke-width="2"/>
+  <circle cx="320" cy="90" r="48" stroke="url(#streakRing)" stroke-width="7" fill="none"/><circle cx="320" cy="42" r="8" fill="#161B22" stroke="url(#streakRing)" stroke-width="5"/>
+  <text x="320" y="98" text-anchor="middle" dominant-baseline="middle" fill="#C084FC" font-family="Arial,sans-serif" font-size="34" font-weight="700">0</text>
+  <text x="320" y="165" text-anchor="middle" fill="#C084FC" font-family="Arial,sans-serif" font-size="16" font-weight="700">Current Streak</text>
+  <text x="320" y="195" text-anchor="middle" fill="#2DD4BF" font-family="Arial,sans-serif" font-size="13">No active streak</text>
+  <line x1="410" y1="50" x2="410" y2="200" stroke="#D1D5DB" stroke-opacity=".55" stroke-width="2"/>
+  <text x="480" y="99" fill="#E6EDF3" font-family="Apple Color Emoji,Segoe UI Emoji,Noto Color Emoji,sans-serif" font-size="24">⭐</text>
+  <text x="535" y="96" text-anchor="middle" fill="#C084FC" font-family="Arial,sans-serif" font-size="34" font-weight="700">35</text>
+  <text x="525" y="135" text-anchor="middle" fill="url(#longestTitleGradient)" font-family="Arial,sans-serif" font-size="16">Longest Streak</text>
+  <text x="525" y="170" text-anchor="middle" fill="#2DD4BF" font-family="Arial,sans-serif" font-size="13">May 22 – Jun 25</text>
+</svg>

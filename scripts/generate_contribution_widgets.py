@@ -153,7 +153,12 @@ def render_streak(total: int, days: list[tuple[date, int]]) -> str:
       <stop offset="52%" stop-color="#EC4899"/>
       <stop offset="100%" stop-color="#70A5FD"/>
     </linearGradient>
-    <linearGradient id="titleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="totalTitleGradient" x1="60" y1="0" x2="190" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#C084FC"/>
+      <stop offset="52%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#70A5FD"/>
+    </linearGradient>
+    <linearGradient id="longestTitleGradient" x1="465" y1="0" x2="585" y2="0" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#C084FC"/>
       <stop offset="52%" stop-color="#EC4899"/>
       <stop offset="100%" stop-color="#70A5FD"/>
@@ -162,7 +167,7 @@ def render_streak(total: int, days: list[tuple[date, int]]) -> str:
   <rect width="640" height="250" rx="14" fill="{BG}"/>
   <text x="55" y="101" fill="{TEXT}" font-family="Apple Color Emoji,Segoe UI Emoji,Noto Color Emoji,sans-serif" font-size="28">🔥</text>
   <text x="130" y="96" text-anchor="middle" fill="{PURPLE}" font-family="Arial,sans-serif" font-size="34" font-weight="700">{total}</text>
-  <text x="125" y="135" text-anchor="middle" fill="url(#titleGradient)" font-family="Arial,sans-serif" font-size="16">Total Contributions</text>
+  <text x="125" y="135" text-anchor="middle" fill="url(#totalTitleGradient)" font-family="Arial,sans-serif" font-size="16">Total Contributions</text>
   <text x="125" y="170" text-anchor="middle" fill="{TEAL}" font-family="Arial,sans-serif" font-size="12">{escape(year_label)}</text>
   <line x1="250" y1="50" x2="250" y2="200" stroke="#D1D5DB" stroke-opacity=".55" stroke-width="2"/>
   <circle cx="320" cy="90" r="48" stroke="url(#streakRing)" stroke-width="7" fill="none"/><circle cx="320" cy="42" r="8" fill="{BG}" stroke="url(#streakRing)" stroke-width="5"/>
@@ -172,7 +177,7 @@ def render_streak(total: int, days: list[tuple[date, int]]) -> str:
   <line x1="410" y1="50" x2="410" y2="200" stroke="#D1D5DB" stroke-opacity=".55" stroke-width="2"/>
   <text x="480" y="99" fill="{TEXT}" font-family="Apple Color Emoji,Segoe UI Emoji,Noto Color Emoji,sans-serif" font-size="24">⭐</text>
   <text x="535" y="96" text-anchor="middle" fill="{PURPLE}" font-family="Arial,sans-serif" font-size="34" font-weight="700">{longest}</text>
-  <text x="525" y="135" text-anchor="middle" fill="url(#titleGradient)" font-family="Arial,sans-serif" font-size="16">Longest Streak</text>
+  <text x="525" y="135" text-anchor="middle" fill="url(#longestTitleGradient)" font-family="Arial,sans-serif" font-size="16">Longest Streak</text>
   <text x="525" y="170" text-anchor="middle" fill="{TEAL}" font-family="Arial,sans-serif" font-size="13">{escape(longest_range)}</text>
 </svg>
 '''
@@ -203,6 +208,7 @@ def main() -> None:
         streak_svg, diagnostics = generate()
         OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
         (OUTPUT_DIR / "github-streak.svg").write_text(streak_svg, encoding="utf-8")
+        (OUTPUT_DIR / "github-streak-v2.svg").write_text(streak_svg, encoding="utf-8")
         print(f"Generated contribution streak for {diagnostics['start']} through {diagnostics['end']} UTC.")
         print(f"Calendar total: {diagnostics['calendar_total']}; sum of in-range daily counts: {diagnostics['daily_total']}.")
         print("GraphQL restrictedContributionsCount was queried for diagnostics and was not added to the calendar total.")
