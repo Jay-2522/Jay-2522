@@ -33,9 +33,8 @@ query($login: String!, $from: DateTime!, $to: DateTime!) {
 }
 """
 
-BG = "#1B1B2F"
+BG = "#161B22"
 TEXT = "#E6EDF3"
-BLUE = "#70A5FD"
 PURPLE = "#C084FC"
 TEAL = "#2DD4BF"
 
@@ -157,7 +156,7 @@ def render_streak(total: int, days: list[tuple[date, int]]) -> str:
   </defs>
   <rect width="640" height="250" rx="14" fill="{BG}"/>
   <text x="55" y="101" fill="{TEXT}" font-family="Apple Color Emoji,Segoe UI Emoji,Noto Color Emoji,sans-serif" font-size="28">🔥</text>
-  <text x="130" y="96" text-anchor="middle" fill="{BLUE}" font-family="Arial,sans-serif" font-size="34" font-weight="700">{total}</text>
+  <text x="130" y="96" text-anchor="middle" fill="{PURPLE}" font-family="Arial,sans-serif" font-size="34" font-weight="700">{total}</text>
   <text x="125" y="135" text-anchor="middle" fill="{TEXT}" font-family="Arial,sans-serif" font-size="16">Total Contributions</text>
   <text x="125" y="170" text-anchor="middle" fill="{TEAL}" font-family="Arial,sans-serif" font-size="12">{escape(year_label)}</text>
   <line x1="250" y1="50" x2="250" y2="200" stroke="#D1D5DB" stroke-opacity=".55" stroke-width="2"/>
@@ -167,7 +166,7 @@ def render_streak(total: int, days: list[tuple[date, int]]) -> str:
   <text x="320" y="195" text-anchor="middle" fill="{TEAL}" font-family="Arial,sans-serif" font-size="13">{escape(current_range)}</text>
   <line x1="410" y1="50" x2="410" y2="200" stroke="#D1D5DB" stroke-opacity=".55" stroke-width="2"/>
   <text x="480" y="99" fill="{TEXT}" font-family="Apple Color Emoji,Segoe UI Emoji,Noto Color Emoji,sans-serif" font-size="24">⭐</text>
-  <text x="535" y="96" text-anchor="middle" fill="{BLUE}" font-family="Arial,sans-serif" font-size="34" font-weight="700">{longest}</text>
+  <text x="535" y="96" text-anchor="middle" fill="{PURPLE}" font-family="Arial,sans-serif" font-size="34" font-weight="700">{longest}</text>
   <text x="525" y="135" text-anchor="middle" fill="{TEXT}" font-family="Arial,sans-serif" font-size="16">Longest Streak</text>
   <text x="525" y="170" text-anchor="middle" fill="{TEAL}" font-family="Arial,sans-serif" font-size="13">{escape(longest_range)}</text>
 </svg>
