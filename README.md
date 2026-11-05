@@ -24,7 +24,7 @@
 ## 🛠️ Tech Stack
 
 <div align="center">
-  <img src="./assets/tech-stack-v6.svg" alt="Tech stack organized into a two by two grid: Frontend, Backend, AI and ML, Database" width="100%" />
+  <img src="./assets/tech-stack-v7.svg" alt="Tech stack organized into a two by two grid: Frontend, Backend, AI and ML, Database" width="100%" />
 </div>
 
 ---
@@ -48,6 +48,12 @@
   </a>
   <a href="mailto:virlankijaidheepwork@gmail.com" target="_blank">
     <img src="https://img.shields.io/badge/gmail-%23D14836.svg?&style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail" style="margin-bottom: 5px;" />
+  </a>
+  <a href="https://jaidheep.vercel.app/" target="_blank">
+    <img src="https://img.shields.io/badge/portfolio-%23000000.svg?&style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" style="margin-bottom: 5px;" />
+  </a>
+  <a href="https://jaidheep.vercel.app/" target="_blank">
+    <img src="https://img.shields.io/badge/portfolio-%23000000.svg?&style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" style="margin-bottom: 5px;" />
   </a>
 </div>
 
