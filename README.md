@@ -52,9 +52,6 @@
   <a href="https://jaidheep.vercel.app/" target="_blank">
     <img src="https://img.shields.io/badge/portfolio-%23000000.svg?&style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" style="margin-bottom: 5px;" />
   </a>
-  <a href="https://jaidheep.vercel.app/" target="_blank">
-    <img src="https://img.shields.io/badge/portfolio-%23000000.svg?&style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" style="margin-bottom: 5px;" />
-  </a>
 </div>
 
 <br/>
