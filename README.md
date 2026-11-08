@@ -24,7 +24,7 @@
 ## 🛠️ Tech Stack
 
 <div align="center">
-  <img src="./assets/tech-stack-v7.svg" alt="Tech stack organized into a two by two grid: Frontend, Backend, AI and ML, Database" width="100%" />
+  <img src="./assets/tech-stack-v8.svg" alt="Resume-listed technology skills presented as individual logo tiles" width="100%" />
 </div>
 
 ---
