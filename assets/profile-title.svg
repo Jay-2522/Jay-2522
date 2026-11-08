@@ -7,5 +7,5 @@
   </style>
   <text x="150" y="76" class="greeting" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="62" font-weight="700">Hey, I’m</text>
   <text x="392" y="76" fill="#ff2438" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="62" font-weight="700">Virlanki Jaidheep</text>
-  <rect x="392" y="106" width="110" height="5" rx="2.5" fill="#ff2438"/>
+  <rect x="392" y="106" width="474" height="5" rx="2.5" fill="#ff2438"/>
 </svg>
