@@ -1,11 +1,21 @@
 <div align="center">
-  <img src="./assets/profile-hero.svg" alt="Hey, I'm Virlanki Jaidheep — Full-Stack Developer and AI/ML Enthusiast" width="100%" />
+  <img src="./assets/profile-title.svg" alt="Hey, I'm Virlanki Jaidheep" width="100%" />
+  <h4>race · react · respond</h4>
 </div>
 
 <br/>
 
-- 🚀 Building **scalable full-stack products powered by practical AI**.
-- 🤖 Turning **complex ideas into intelligent, user-focused applications**.
+<div align="center">
+  <img src="https://i.pinimg.com/originals/dd/79/4e/dd794eab856dc258b564fa88a92f02c4.gif"
+       alt="Racing car animation"
+       width="500px">
+</div>
+
+<br/>
+
+- 🚀 Building **full-stack products where AI solves meaningful problems**.
+- 🤖 Exploring **real-time systems, machine learning, and modern backend architecture**.
+- ⚡ Focused on **clean engineering, thoughtful design, and reliable user experiences**.
 
 <br/>
 
