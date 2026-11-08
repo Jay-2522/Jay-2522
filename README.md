@@ -1,21 +1,11 @@
-<div align="center"> 
-   <h1> Hey, I'm Virlanki Jaidheep 🏎️💨 </h1>
-   <h4> race · react · respond </h4>
-</div>
-
-<br/>
-
 <div align="center">
-  <img src="https://i.pinimg.com/originals/dd/79/4e/dd794eab856dc258b564fa88a92f02c4.gif" 
-       alt="GIF" 
-       width="500px">
+  <img src="./assets/profile-hero.svg" alt="Hey, I'm Virlanki Jaidheep — Full-Stack Developer and AI/ML Enthusiast" width="100%" />
 </div>
 
 <br/>
 
-- 🚀 Currently working on **Full Stack with AI Integration**
-- 🤖 Ask me about anything related to **AI & ML**
-- 📬 Reach me at [virlankijaidheep@gmail.com](mailto:virlankijaidheepwork@gmail.com)
+- 🚀 Building **scalable full-stack products powered by practical AI**.
+- 🤖 Turning **complex ideas into intelligent, user-focused applications**.
 
 <br/>
 
