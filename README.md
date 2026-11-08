@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./assets/profile-title-v2.svg" alt="Hey, I'm Virlanki Jaidheep" width="100%" />
+  <img src="./assets/profile-title-v3.svg" alt="Hey, I'm Virlanki Jaidheep" width="100%" />
   <h4>race · react · respond</h4>
 </div>
 
