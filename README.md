@@ -52,7 +52,7 @@
 ## 🔥 Contributions & Streak
 
 <div align="center">
-  <img src="./assets/github-streak-v2.svg" alt="GitHub Streak" />
+  <img src="./assets/github-streak-v2.svg" alt="GitHub contribution statistics for the last 365 days, including total contributions, current streak, and longest streak" />
 </div>
 
 ---
