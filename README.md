@@ -1,9 +1,6 @@
 <div align="center">
   <img src="./assets/profile-title-v4.svg" alt="Hey, I'm Virlanki Jaidheep" width="100%" />
-  <h4>race · react · respond</h4>
 </div>
-
-<br/>
 
 <div align="center">
   <img src="https://i.pinimg.com/originals/dd/79/4e/dd794eab856dc258b564fa88a92f02c4.gif"
@@ -16,6 +13,7 @@
 - 🚀 Building **full-stack products where AI solves meaningful problems**.
 - 🤖 Exploring **real-time systems, machine learning, and modern backend architecture**.
 - ⚡ Focused on **clean engineering, thoughtful design, and reliable user experiences**.
+- 🛠️ Learning through **building, shipping, and continuously improving real products**.
 
 <br/>
 
